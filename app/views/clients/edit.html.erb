@@ -1,0 +1,21 @@
+<h1> welcome to edit page</h1>
+<%= form_with model: @client   do |f| %>
+<%if @client.errors.any?%>
+  <%@client.errors.full_messages do |message| %>
+  <%= message%>
+  <%end%>
+<%end%>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

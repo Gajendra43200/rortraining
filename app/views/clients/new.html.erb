@@ -1,0 +1,22 @@
+<h1>Clints#new</h1>
+<p>Find me in app/views/clints/new.html.erb</p>
+<%= form_with model: @clientt   do |f| %>
+<%if @clientt.errors.any?%>
+  <%@clientt.errors.full_messages do |message| %>
+  <%= message%>
+  <%end%>
+<%end%>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
