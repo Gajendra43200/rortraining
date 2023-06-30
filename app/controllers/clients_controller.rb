@@ -3,7 +3,7 @@ class ClientsController < ApplicationController
     @clientt = Client.new
   end
   def index 
-    @clints= Client.all 
+    @clients= Client.all 
   end
   def create  
     @client = Client.new(data)

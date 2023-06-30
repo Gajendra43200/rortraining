@@ -9,6 +9,10 @@ gem "rails", "~> 7.0.5"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+#  This gem is responsible for password encryption and authentication.
+# With these changes in place, the authenticate method should be available in the User model, allowing you to verify the user's password during authentication.
+gem 'bcrypt', '~> 3.1.7'
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
